@@ -1,0 +1,3 @@
+microroutenet-configs:
+  local-communication:
+    port: 9090
