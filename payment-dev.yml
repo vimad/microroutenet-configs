@@ -16,4 +16,4 @@ microroutenet-configs:
     rest-payment-completed-order:
       name: payment-completed-order
       method: GET
-      api: http://localhost:8081/order/{id}/{status}
+      api: http://localhost:9091/order/{id}/{status}
