@@ -4,8 +4,10 @@ microroutenet-configs:
   inter-communication:
     - name: payment-completed-order
       plugin: rest
+      type: producer
     - name: payment-completed-warehouse
       plugin: rest
+      type: producer
   plugins:
     kafka-class-name: org.microroutenet.KafkaPlugin
     rest-class-name: org.microroutenet.core.service.RestPlugin
