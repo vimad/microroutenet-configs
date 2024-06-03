@@ -14,8 +14,8 @@ microroutenet-configs:
     rest-payment-completed-warehouse:
       name: payment-completed-warehouse
       method: GET
-      api: http://localhost:9092/product/reserve/{id}
+      api: http://localhost:7072/product/reserve/{id}
     rest-payment-completed-order:
       name: payment-completed-order
       method: GET
-      api: http://localhost:9091/order/{id}/{status}
+      api: http://localhost:7071/order/{id}/{status}
