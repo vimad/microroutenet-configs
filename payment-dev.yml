@@ -13,7 +13,7 @@ microroutenet-configs:
     rest-class-name: org.microroutenet.core.service.RestPlugin
     kafka-payment-completed-warehouse:
       name: payment-completed-warehouse
-      bootstrap-server: localhost:9092
+      bootstrap-server: localhost:9093
       topic: payment-completed
     rest-payment-completed-order:
       name: payment-completed-order
