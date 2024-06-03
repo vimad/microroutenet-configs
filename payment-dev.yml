@@ -14,7 +14,7 @@ microroutenet-configs:
     kafka-payment-completed-warehouse:
       name: payment-completed-warehouse
       bootstrap-server: localhost:9092
-      topic: payment-completed
+      topic: payment_completed
     rest-payment-completed-order:
       name: payment-completed-order
       method: GET
