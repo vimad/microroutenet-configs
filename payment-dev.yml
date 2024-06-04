@@ -15,6 +15,7 @@ microroutenet-configs:
       name: payment-completed-warehouse
       bootstrap-server: localhost:9092
       topic: payment_completed
+      type: producer
     rest-payment-completed-order:
       name: payment-completed-order
       method: GET
