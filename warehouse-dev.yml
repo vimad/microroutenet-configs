@@ -15,4 +15,4 @@ microroutenet-configs:
       type: consumer
       destination-method: GET
       group-id: payment-completed-warehouse-id
-      destination:
+      destination: http://localhost:7072/product/reserve/{id}
