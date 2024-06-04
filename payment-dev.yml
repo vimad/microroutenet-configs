@@ -6,15 +6,16 @@ microroutenet-configs:
       plugin: rest
       type: producer
     - name: payment-completed-warehouse
-      plugin: rest
+      plugin: kafka
       type: producer
   plugins:
     kafka-class-name: org.microroutenet.KafkaPlugin
     rest-class-name: org.microroutenet.core.service.RestPlugin
-    rest-payment-completed-warehouse:
+    kafka-payment-completed-warehouse:
       name: payment-completed-warehouse
-      method: GET
-      api: http://localhost:7072/product/reserve/{id}
+      bootstrap-server: localhost:9092
+      topic: payment_completed
+      type: producer
     rest-payment-completed-order:
       name: payment-completed-order
       method: GET
