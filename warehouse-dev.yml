@@ -1,3 +1,18 @@
 microroutenet-configs:
   local-communication:
     port: 8082
+  inter-communication:
+    - name: payment-completed-warehouse
+      plugin: kafka
+      type: consumer
+  plugins:
+    kafka-class-name: org.microroutenet.KafkaPlugin
+    rest-class-name: org.microroutenet.core.service.RestPlugin
+    kafka-payment-completed-warehouse:
+      name: payment-completed-warehouse
+      bootstrap-server: localhost:9092
+      topic: payment_completed
+      type: consumer
+      destination-method: GET
+      group-id: payment-completed-warehouse-id
+      destination: http://localhost:8082/product/reserve/{id}
